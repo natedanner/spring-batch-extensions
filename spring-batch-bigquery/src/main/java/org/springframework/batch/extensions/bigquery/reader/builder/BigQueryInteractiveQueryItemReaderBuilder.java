@@ -34,7 +34,7 @@ import java.util.Objects;
  * @since 0.2.0
  * @see <a href="https://github.com/spring-projects/spring-batch-extensions/tree/main/spring-batch-bigquery/src/test/java/org/springframework/batch/extensions/bigquery/unit/reader/builder/BigQueryInteractiveQueryItemReaderBuilderTests.java">Examples</a>
  */
-public class BigQueryInteractiveQueryItemReaderBuilder<T> {
+public final class BigQueryInteractiveQueryItemReaderBuilder<T> {
 
     private BigQuery bigQuery;
     private String query;

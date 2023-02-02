@@ -50,7 +50,9 @@ import java.util.function.Supplier;
  * @author Volodymyr Perebykivskyi
  * @since 0.1.0
  */
-public abstract class BigQueryBaseItemWriter<T> implements ItemWriter<T> {
+sealed abstract class BigQueryBaseItemWriter<T>
+        implements ItemWriter<T>
+        permits BigQueryCsvItemWriter, BigQueryJsonItemWriter {
 
     /** Logger that can be reused */
     protected final Log logger = LogFactory.getLog(getClass());

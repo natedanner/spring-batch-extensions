@@ -33,7 +33,7 @@ import java.util.function.Consumer;
  * @since 0.2.0
  * @see <a href="https://github.com/spring-projects/spring-batch-extensions/tree/main/spring-batch-bigquery/src/test/java/org/springframework/batch/extensions/bigquery/unit/writer/builder/BigQueryJsonItemWriterBuilderTests.java">Examples</a>
  */
-public class BigQueryJsonItemWriterBuilder<T>  {
+public final class BigQueryJsonItemWriterBuilder<T>  {
 
     private Converter<T, byte[]> rowMapper;
 
