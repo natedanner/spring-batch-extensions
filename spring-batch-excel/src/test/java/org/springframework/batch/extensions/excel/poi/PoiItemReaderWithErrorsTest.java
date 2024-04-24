@@ -47,7 +47,7 @@ public class PoiItemReaderWithErrorsTest {
 		this.itemReader.setResource(new ClassPathResource("errors.xlsx"));
 		this.itemReader.setLinesToSkip(1); // First line is column names
 		this.itemReader.setRowMapper(new PassThroughRowMapper());
-		this.itemReader.setSkippedRowsCallback((rs) -> this.logger.info("Skipping: " + Arrays.toString(rs.getCurrentRow())));
+		this.itemReader.setSkippedRowsCallback(rs -> this.logger.info("Skipping: " + Arrays.toString(rs.getCurrentRow())));
 		this.itemReader.afterPropertiesSet();
 
 		ExecutionContext executionContext = new ExecutionContext();

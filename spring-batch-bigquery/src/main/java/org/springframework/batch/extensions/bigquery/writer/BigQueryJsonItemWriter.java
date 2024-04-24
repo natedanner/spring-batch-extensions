@@ -89,7 +89,7 @@ public class BigQueryJsonItemWriter<T> extends BigQueryBaseItemWriter<T> impleme
             Table table = getTable();
 
             if (BooleanUtils.toBoolean(super.writeChannelConfig.getAutodetect())) {
-                if ((tableHasDefinedSchema(table) && super.logger.isWarnEnabled())) {
+                if (tableHasDefinedSchema(table) && super.logger.isWarnEnabled()) {
                     super.logger.warn("Mixing autodetect mode with already defined schema may lead to errors on BigQuery side");
                 }
             } else {

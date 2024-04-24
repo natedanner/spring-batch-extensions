@@ -49,7 +49,7 @@ public abstract class AbstractExcelItemReaderTests {
 		this.itemReader.setLinesToSkip(1); // First line is column names
 		this.itemReader.setResource(new ClassPathResource("player.xls"));
 		this.itemReader.setRowMapper(new PassThroughRowMapper());
-		this.itemReader.setSkippedRowsCallback((rs) -> this.logger.info("Skipping: " + Arrays.toString(rs.getCurrentRow())));
+		this.itemReader.setSkippedRowsCallback(rs -> this.logger.info("Skipping: " + Arrays.toString(rs.getCurrentRow())));
 		configureItemReader(this.itemReader);
 		this.itemReader.afterPropertiesSet();
 		ExecutionContext executionContext = new ExecutionContext();

@@ -271,7 +271,7 @@ public class BeanWrapperRowMapper<T> extends DefaultPropertyEditorRegistrar
 
 			Object nestedValue = getPropertyValue(bean, nestedName);
 			String nestedPropertyName = findPropertyName(nestedValue, suffix);
-			return (nestedPropertyName != null) ? nestedName + "." + nestedPropertyName : null;
+			return nestedPropertyName != null ? nestedName + "." + nestedPropertyName : null;
 		}
 
 		String name = null;
@@ -371,7 +371,7 @@ public class BeanWrapperRowMapper<T> extends DefaultPropertyEditorRegistrar
 		public int hashCode() {
 			final int prime = 31;
 			int result = 1;
-			result = prime * result + ((this.cls == null) ? 0 : this.cls.hashCode());
+			result = prime * result + (this.cls == null ? 0 : this.cls.hashCode());
 			result = prime * result + this.distance;
 			return result;
 		}

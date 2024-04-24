@@ -60,7 +60,7 @@ public class IsoFormattingDateDataFormatter extends DataFormatter {
 
 		if (cellType == CellType.NUMERIC && DateUtil.isCellDateFormatted(cell, cfEvaluator)) {
 			LocalDateTime value = cell.getLocalDateTimeCellValue();
-			return (value != null) ? value.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME) : "";
+			return value != null ? value.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME) : "";
 		}
 		return super.formatCellValue(cell, evaluator, cfEvaluator);
 	}

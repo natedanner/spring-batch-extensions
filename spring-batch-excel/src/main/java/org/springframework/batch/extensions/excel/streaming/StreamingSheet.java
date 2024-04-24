@@ -214,7 +214,7 @@ class StreamingSheet implements Sheet {
 			// Create a copy of the existing array and append to it.
 			if (this.values.length <= col) {
 				String[] newValues = Arrays.copyOf(this.values, col + 1);
-				Arrays.setAll(newValues, (idx) -> (newValues[idx] != null) ? newValues[idx] : "");
+				Arrays.setAll(newValues, idx -> newValues[idx] != null ? newValues[idx] : "");
 				this.values = newValues;
 			}
 			this.values[col] = formattedValue;

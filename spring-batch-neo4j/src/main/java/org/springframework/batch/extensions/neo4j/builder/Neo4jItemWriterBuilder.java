@@ -30,7 +30,7 @@ import org.springframework.util.Assert;
  */
 public class Neo4jItemWriterBuilder<T> {
 
-	private boolean delete = false;
+	private boolean delete;
 
 	private SessionFactory sessionFactory;
 

@@ -44,7 +44,7 @@ public class ElasticsearchItemReaderTest {
 	public void setUp() throws Exception {
 		initMocks(this);
 		query = new NativeSearchQueryBuilder().build();
-		reader = new ElasticsearchItemReader<Object>(elasticsearchOperations, query, Object.class);
+		reader = new ElasticsearchItemReader<>(elasticsearchOperations, query, Object.class);
 		reader.afterPropertiesSet();
 	}
 

@@ -57,7 +57,7 @@ public class ElasticsearchItemWriter implements ItemWriter<IndexQuery>, Initiali
 
 	private final String dataKey;
 	private final Logger logger;
-	private ElasticsearchOperations elasticsearchOperations;	
+	private final ElasticsearchOperations elasticsearchOperations;	
 	private boolean delete;
 
 	public ElasticsearchItemWriter(ElasticsearchOperations elasticsearchOperations) {
